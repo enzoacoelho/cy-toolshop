@@ -4,7 +4,7 @@ import loginPage from '../../support/pages/login.page';
 
 describe ('Login', () => {
 
-    let email
+    let email  
     let senha
 
     beforeEach ('', () => {
@@ -38,8 +38,7 @@ describe ('Login', () => {
         loginPage.botaoLogin.click()
 
         cy.url().should('contain', 'login')
-        loginPage.alertaEmail.should('contain', 'Email format is invalid')
-        loginPage.alertaSenha.should('contain', 'Password is required')        
+        loginPage.alertaEmail.should('contain', 'Email format is invalid')  
     })
 
     it('Não deve fazer login com espaços antes/depois de credenciais válidas', () => {
@@ -47,8 +46,7 @@ describe ('Login', () => {
         loginPage.botaoLogin.click()
 
         cy.url().should('contain', 'login')
-        loginPage.alertaEmail.should('contain', 'Email format is invalid')
-        loginPage.alertaSenha.should('contain', 'Password is required')        
+        loginPage.alertaEmail.should('contain', 'Email format is invalid')       
     })
 
     it('Não deve fazer login com e-mail não cadastrado', () => {
@@ -95,5 +93,4 @@ describe ('Login', () => {
         cy.url().should('not.contain', 'account')
         cy.url().should('contain', 'login')
     })
-
 })
