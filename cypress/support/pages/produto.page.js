@@ -15,7 +15,21 @@ class ProdutoPage {
     get aumentarQuantidade(){return cy.get('[data-test="increase-quantity"]')}
     get quantidade(){return cy.get('[data-test="quantity"]')}
 
+
+    
+
     //ações
+    addicionarAoCarrinho(){
+        this.addCarrinho.click()
+    }
+
+    aumentarQuantidade(){
+        this.aumentarQuantidade.click()
+    }
+
+    diminuirQuantidade(){
+        this.diminuirQuantidade.click()
+    }
 }
 
 export default new ProdutoPage()

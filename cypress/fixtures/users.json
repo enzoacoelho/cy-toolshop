@@ -1,4 +1,6 @@
 {
-  "email": "customer@practicesoftwaretesting.com",
-  "senha": "welcome01"
+  "userValido": {
+    "email": "customer@practicesoftwaretesting.com",
+    "senha": "welcome01"
+  }
 }
